@@ -24,6 +24,11 @@ libglfw-dev
 libglfw2
 libglfw3
 libglfw3-dev
+freeglut3
+freeglut3-dev
+libglc-dev
+libglw1-mesa
+libglw1-mesa-dev
 //opengl end
 //rust start
 rustc
@@ -46,6 +51,8 @@ npm
 //js end
 //haskell start
 ghc
+haskell-platform
+haskell-stack
 cabal-install
 //haskell recommanded (not required)
 alex
