@@ -1,0 +1,82 @@
+sudo apt-get update
+sudo apt-get upgrade
+
+sudo apt-get install
+//useful start
+tlp(and sudo tlp start)
+gcc
+clang
+cmake
+make
+build-essentials
+emacs
+vim
+git
+chromium
+libclang-dev
+software-properties-common
+//useful end
+//opengl start
+libgl1-mesa-dev
+libglew-dev
+libglewmx-dev
+libglfw-dev
+libglfw2
+libglfw3
+libglfw3-dev
+//opengl end
+//rust start
+rustc
+cargo(and cargo install racer rustfmt)
+//rust end
+//python start
+python3.5
+python3.5-dev
+python2.7
+python2.7-dev
+pypy
+python-pip
+python3-pip
+python-pygame
+pylint
+pylint3
+//python end
+//js start
+npm
+//js end
+//haskell start
+ghc
+cabal-install
+//haskell recommanded (not required)
+alex
+libghc-cgi-dev
+libghc-fgl-dev
+libghc-glut-dev
+libghc-haskell-src-dev
+libghc-haskell-html-dev
+libghc-html-dev
+libghc-http-dev
+libghc-hunit-dev
+libghc-mtl-dev
+libghc-network-dev
+libghc-opengl-dev
+libghc-parallel-dev
+libghc-parsec3-dev
+libghc-quickcheck2-dev
+libghc-regex-base-dev
+libghc-regex-compat-dev
+libghc-regex-posix-dev
+libghc-stm-dev
+libghc-syb-dev
+libghc-text-dev
+libghc-transformers-dev
+libghc-xhtml-dev
+libghc-zlib-dev
+//haskell recommanded end
+//haskell end
+sudo add-apt-repository
+ppa:hvr/ghc
+http://packages.microsoft.com/repos/vscode
+http://packages.microsoft.com/repos/vscode stable/main
+http://ppa.launchpad.net/mystic-mirage/pycharm/ubuntu
+http://ppa.launchpad.net/snwh/pulp/ubuntu xenial
