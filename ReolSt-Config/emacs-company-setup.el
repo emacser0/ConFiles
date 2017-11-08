@@ -1,14 +1,20 @@
-;emacs-racer setup                                                              
-(add-hook 'rust-mode-hook #'racer-mode)
-(add-hook 'racer-mode-hook #'eldoc-mode)
+;auto-enable company-mode
+(add-hook 'after-init-hook 'global-company-mode)
 
-(add-hook 'racer-mode-hook #'company-mode)
-
-(require 'rust-mode)
-(define-key rust-mode-map (kbd "C-<f12>") #'company-indent-or-complete-common)
-(setq company-tooltip-align-annotations t)
-
-;(unless (getenv "RUST_SRC_PATH")                                               
-;  (setenv "RUST_SRC_PATH" (expand-file-name "~/path/to/rust/src")))            
-
+;company color settings
+(custom-set-faces
+ '(company-preview
+   ((t (:foreground "darkgray" :underline t))))
+ '(company-preview-common
+   ((t (:inherit company-preview))))
+ '(company-tooltip
+   ((t (:background "lightgray" :foreground "black"))))
+ '(company-tooltip-selection
+   ((t (:background "steelblue" :foreground "white"))))
+ '(company-tooltip-common
+   ((((type x)) (:inherit company-tooltip :weight bold))
+    (t (:inherit company-tooltip))))
+ '(company-tooltip-common-selection
+   ((((type x)) (:inherit company-tooltip-selection :weight bold))
+    (t (:inherit company-tooltip-selection)))))
 
