@@ -5,3 +5,4 @@
   )
 
 (setq python-shell-interpreter "ipython3")
+(setq flycheck-python-pylint-executable "pylint3")

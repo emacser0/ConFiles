@@ -6,7 +6,7 @@
 (show-paren-mode 1)
 (setq show-paren-delay 0)
 
-;auto indent 2                                                                                                                                                                 
+;auto indent                                                                                                                                                                 
 (setq-default c-basic-offset 2)
-
+(setq-default python-indent-offset 2)
 
