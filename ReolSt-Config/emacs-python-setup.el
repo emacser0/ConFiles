@@ -4,3 +4,4 @@
   "/usr/bin/python3 -i"
   )
 
+(setq python-shell-interpreter "ipython3")
