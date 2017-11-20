@@ -8,5 +8,5 @@
 
 ;auto indent                                                                                                                                                                 
 (setq-default c-basic-offset 2)
-(setq-default python-indent-offset 2)
+
 
