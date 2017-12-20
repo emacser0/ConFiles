@@ -1,6 +1,10 @@
 ;auto-enable company-mode
 (add-hook 'after-init-hook 'global-company-mode)
 
+;company speeding up settings
+(setq company-dabbrev-downcase 0)
+(setq company-idle-delay 0)
+
 ;company color settings
 (custom-set-faces
  '(company-preview
