@@ -1,0 +1,1 @@
+(add-hook 'nimsuggest-mode-hook 'nimsuggest-mode)
