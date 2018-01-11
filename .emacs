@@ -6,62 +6,37 @@
    t)
   (package-initialize))
 
-;auto-enable company-mode
-(add-hook 'after-init-hook 'global-company-mode)
 
-;configurate flycheck-irony
-(eval-after-load 'flycheck
-  '(add-hook 'flycheck-mode-hook #'flycheck-irony-setup))
+(defun load-directory (dir)
+  (let ((load-it (lambda (f)
+		   (load-file (concat (file-name-as-directory dir) f)))
+		 ))
+    (mapc load-it (directory-files dir nil "\\.el$"))))
 
-(global-flycheck-mode 1)
+(load-directory "~/Desktop/git/configfile/emacs")
 
-;flycheck-rust setup
-(add-hook 'flycheck-mode-hook #'flycheck-rust-setup)
-
-;emacs-racer setup
-(add-hook 'rust-mode-hook #'racer-mode)
-(add-hook 'racer-mode-hook #'eldoc-mode)
-
-(add-hook 'racer-mode-hook #'company-mode)
-
-(require 'rust-mode)
-(define-key rust-mode-map (kbd "C-<f12>") #'company-indent-or-complete-common)
-(setq company-tooltip-align-annotations t)
-
-;(unless (getenv "RUST_SRC_PATH")
-;  (setenv "RUST_SRC_PATH" (expand-file-name "~/path/to/rust/src")))
-
-;company color settings
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(ansi-color-faces-vector
+   [default default default italic underline success warning error])
+ '(ansi-color-names-vector
+   ["#242424" "#e5786d" "#95e454" "#cae682" "#8ac6f2" "#333366" "#ccaa8f" "#f6f3e8"])
+ '(company-go-gocode-command "/home/ernesti/go/bin/gocode")
+ '(custom-enabled-themes (quote (wheatgrass)))
+ '(package-selected-packages
+   (quote
+    (ensime jdee company-emacs-eclim jtags java-imports nim-mode flycheck-nimsuggest exec-path-from-shell plsense company-plsense company-web company-shell company-cabal company company-go flymake-go flycheck-objc-clang flycheck-nim go-mode sbt-mode rust-mode flycheck-yamllint flycheck-perl6 flycheck-kotlin flycheck-ghcmod flycheck-clojure perl6-mode ant android-mode kotlin-mode groovy-mode ceylon-mode yasnippet virtualenv undo-tree smart-cursor-color scala-mode racer paredit irony-eldoc flycheck-stack flycheck-rust flycheck-pyflakes flycheck-pycheckers flycheck-package flycheck-irony flycheck-haskell flycheck-clangcheck flycheck-clang-tidy flycheck-clang-analyzer company-racer company-jedi company-irony-c-headers company-irony company-ghci company-ghc company-c-headers compact-docstrings autopair auto-complete-clang auto-complete-c-headers ac-c-headers))))
 (custom-set-faces
- '(company-preview
-   ((t (:foreground "darkgray" :underline t))))
- '(company-preview-common
-   ((t (:inherit company-preview))))
- '(company-tooltip
-   ((t (:background "lightgray" :foreground "black"))))
- '(company-tooltip-selection
-   ((t (:background "steelblue" :foreground "white"))))
- '(company-tooltip-common
-   ((((type x)) (:inherit company-tooltip :weight bold))
-    (t (:inherit company-tooltip))))
- '(company-tooltip-common-selection
-   ((((type x)) (:inherit company-tooltip-selection :weight bold))
-    (t (:inherit company-tooltip-selection)))))
-
-;autopair
-(require 'autopair)
-(autopair-global-mode 1)
-
-;show-paren
-(show-paren-mode 1)
-(setq show-paren-delay 0)
-
-;auto indent 2
-(setq-default c-basic-offset 2)
-
-;shortcut settings
-(global-set-key (kbd "TAB") 'company-complete)
-(global-set-key (kbd "<f12> c") 'company-c-headers)
-(global-set-key (kbd "<f12> l") 'linum-mode)
-
-
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(company-preview ((t (:foreground "darkgray" :underline t))))
+ '(company-preview-common ((t (:inherit company-preview))))
+ '(company-tooltip ((t (:background "lightgray" :foreground "black"))))
+ '(company-tooltip-common ((((type x)) (:inherit company-tooltip :weight bold)) (t (:inherit company-tooltip))))
+ '(company-tooltip-common-selection ((((type x)) (:inherit company-tooltip-selection :weight bold)) (t (:inherit company-tooltip-selection))))
+ '(company-tooltip-selection ((t (:background "steelblue" :foreground "white")))))
