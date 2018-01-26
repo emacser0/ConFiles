@@ -1,1 +1,1 @@
-source $ZSHCONFDIR/alias.sh
+source $ZSHCONFHOME/alias.sh
