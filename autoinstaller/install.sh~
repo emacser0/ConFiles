@@ -1,0 +1,4 @@
+sudo sed -e 's/\(us.\)\?archive.ubuntu.com/ftp.daumkakao.com/g' -e 's/security.ubuntu.com/ftp.daumkakao.com/g' < ${SL}.org > ${SL}
+sudo apt-get install gcc -y
+sudo apt-get install g++ -y
+sudo apt-get install 
