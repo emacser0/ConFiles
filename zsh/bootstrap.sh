@@ -1,1 +1,0 @@
-source $ZSHCONFHOME/alias.sh
