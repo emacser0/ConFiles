@@ -22,3 +22,6 @@ sudo apt-get install gcc g++ clang build-essential emacs guake xfce4
 
 sudo sed -i 's/ftp.neowiz.com/archive.ubuntu.com/g' /etc/apt/sources.list
 sudo apt-get update
+
+echo "export DISPLAY=:0.0" >> $HOME/.bashrc
+echo "export DISPLAY=:0.0" >> $HOME/.zshrc
