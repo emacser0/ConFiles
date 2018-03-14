@@ -1,1 +1,1 @@
-source envvar.sh
+source $HOME/Git/ConFiles/sh/envvar.sh
