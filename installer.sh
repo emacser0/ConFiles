@@ -7,7 +7,7 @@ read input
 export EMACSCONFHOME=$HOME/Git/ConFiles/emacs
 
 if [ $input = "y" ]; then
-    cp $EMACSCONFHOME
+    cd $EMACSCONFHOME
     mkdir backup
     cp elisp/{autopair-autoindent-setup.el,common-setup.el,cua-mode.el,emacs-company-setup.el,emacs-cpp-setup.el,flycheck-c.el,shortcut-key-setup.el,undo-tree.el} backup
     rm -rf elisp
