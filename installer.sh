@@ -18,7 +18,7 @@ sudo sed -i 's/kr.archive.ubuntu.com/ftp.neowiz.com/g' /etc/apt/sources.list
 sudo sed -i 's/archive.ubuntu.com/ftp.neowiz.com/g' /etc/apt/sources.list
 sudo apt-get update
 
-sudo apt-get install gcc g++ clang build-essential emacs guake xfce4
+sudo apt-get install -y gcc g++ clang build-essential emacs guake xfce4
 
 sudo sed -i 's/ftp.neowiz.com/archive.ubuntu.com/g' /etc/apt/sources.list
 sudo apt-get update
