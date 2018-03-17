@@ -1,0 +1,4 @@
+sudo sed -i 's/archive.ubuntu.com/ftp.neowiz.com/g' /etc/apt/source.list
+sudo sed -i 's/kr.archive.ubuntu.com/ftp.neowiz.com/g' /etc/apt/source.list
+
+sudo apt-get update

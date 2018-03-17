@@ -5,6 +5,7 @@ printf "Do you want to use only c/c++?\n"
 read input
 
 export EMACSCONFHOME=$HOME/Git/ConFiles/emacs
+cp $EMACSCONFHOME/.emacs $HOME
 
 if [ $input = "y" ]; then
     cd $EMACSCONFHOME
@@ -14,15 +15,17 @@ if [ $input = "y" ]; then
     mv backup elisp
 fi
 
-sudo sed -i 's/kr.archive.ubuntu.com/ftp.neowiz.com/g' /etc/apt/sources.list
-sudo sed -i 's/archive.ubuntu.com/ftp.neowiz.com/g' /etc/apt/sources.list
-sudo apt-get update
-
-sudo apt-get install -y gcc g++ clang build-essential emacs guake xfce4
-
-sudo sed -i 's/ftp.neowiz.com/archive.ubuntu.com/g' /etc/apt/sources.list
-sudo apt-get update
-
 echo "export DISPLAY=:0.0" >> $HOME/.bashrc
 echo "export DISPLAY=:0.0" >> $HOME/.zshrc
-cp $EMACSCONFHOME/.emacs $HOME
+
+source apt-default-neowiz.sh
+
+sudo apt-get install -y gcc
+sudo apt-get install -y g++
+sudo apt-get install -y clang
+sudo apt-get install -y build-essential
+sudo apt-get install -y emacs
+sudo apt-get install -y guake
+sudo apt-get install -y xfce4
+
+source apt-neowiz-default.sh
