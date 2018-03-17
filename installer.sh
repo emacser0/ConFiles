@@ -25,3 +25,4 @@ sudo apt-get update
 
 echo "export DISPLAY=:0.0" >> $HOME/.bashrc
 echo "export DISPLAY=:0.0" >> $HOME/.zshrc
+cp $EMACSCONFHOME/.emacs $HOME
