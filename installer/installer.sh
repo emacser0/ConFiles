@@ -20,7 +20,8 @@ fi
 echo "export DISPLAY=:0.0" >> $HOME/.bashrc
 echo "export DISPLAY=:0.0" >> $HOME/.zshrc
 
-source $INSTALLERHOME/apt-default-neowiz.sh
+sudo sed -i 's/archive.ubuntu.com/ftp.neowiz.com/g' /etc/apt/sources.list
+sudo apt-get update
 
 sudo apt-get install -y gcc
 sudo apt-get install -y g++
