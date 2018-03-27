@@ -3,7 +3,9 @@ echo "source $HOME/Git/ConFiles/sh/boot.sh" >> $HOME/.zshrc
 
 printf "Do you want to use only c/c++?\n"
 read input
-
+export GITHOME=$HOME/Git
+export CONFHOME=$GITHOME/ConFiles
+export INSTALLERHOME=$CONFHOME/INSTALLER
 export EMACSCONFHOME=$HOME/Git/ConFiles/emacs
 cp $EMACSCONFHOME/.emacs $HOME
 
@@ -18,7 +20,7 @@ fi
 echo "export DISPLAY=:0.0" >> $HOME/.bashrc
 echo "export DISPLAY=:0.0" >> $HOME/.zshrc
 
-source apt-default-neowiz.sh
+source $INSTALLERHOME/apt-default-neowiz.sh
 
 sudo apt-get install -y gcc
 sudo apt-get install -y g++

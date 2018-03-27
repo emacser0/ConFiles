@@ -13,7 +13,7 @@
 		 ))
     (mapc load-it (directory-files dir nil "\\.el$"))))
 
-(load-directory "~/Git/ConFiles/emacs")
+(load-directory "~/Git/ConFiles/emacs/elisp")
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
