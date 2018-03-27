@@ -28,4 +28,3 @@ sudo apt-get install -y emacs
 sudo apt-get install -y guake
 sudo apt-get install -y xfce4
 
-source apt-neowiz-default.sh
