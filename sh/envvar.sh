@@ -1,7 +1,7 @@
 export GITHOME=$HOME/Git
 export PROJECTHOME=$GITHOME/Projects
 export CONFHOME=$GITHOME/ConFiles
-export SHFILEHOME=$CONFHOME/sh
+export SHCONFHOME=$CONFHOME/sh
 export EMACSCONFHOME=$CONFHOME/emacs
 export ELISPCONFHOME=$EMACSCONFHOME/elisp
-source $SHFILEHOME/alias.sh
+source $SHCONFHOME/alias.sh
