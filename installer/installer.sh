@@ -25,6 +25,7 @@ sudo apt-get install -y guake
 sudo apt-get install -y xfce4
 sudo apt-get install -y zsh
 sudo apt-get install -y fonts-powerline
+
 cp $EMACSCONFHOME/.emacs $HOME
 curl -L https://git.io/epre | sh
 
@@ -34,11 +35,11 @@ printf "Are you using Windows Subsystem for Linux?\n"
 read input
 
 if [ $input = "y" ]; then
-    echo "source $HOME/Git/ConFiles/sh/boot.sh" >> $HOME/.bashrc
-    echo "source $HOME/Git/ConFiles/sh/boot.sh" >> $HOME/.zshrc
+    echo "export DISPLAY=:0.0" >> $HOME/.bashrc
+    echo "export DISPLAY=:0.0" >> $HOME/.zshrc
 fi
 
-echo "export DISPLAY=:0.0" >> $HOME/.bashrc
-echo "export DISPLAY=:0.0" >> $HOME/.zshrc
+echo "source $HOME/Git/ConFiles/sh/boot.sh" >> $HOME/.bashrc
+echo "source $HOME/Git/ConFiles/sh/boot.sh" >> $HOME/.zshrc
 
 sed -i 's/ZSH_THEME="robbyrussell"/ZSH_THEME="agnoster"/g' $HOME/.zshrc
