@@ -43,3 +43,7 @@ echo "source $HOME/Git/ConFiles/sh/boot.sh" >> $HOME/.bashrc
 echo "source $HOME/Git/ConFiles/sh/boot.sh" >> $HOME/.zshrc
 
 sed -i 's/ZSH_THEME="robbyrussell"/ZSH_THEME="agnoster"/g' $HOME/.zshrc
+
+curl -L https://git.io/epre | sh
+
+cp $EMACSCONFHOME/custom.el $HOME/.emacs.d/personal/
