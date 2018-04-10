@@ -1,7 +1,7 @@
 export GITHOME=$HOME/Git
 export CONFHOME=$GITHOME/ConFiles
-export INSTALLERHOME=$CONFHOME/INSTALLER
-export EMACSCONFHOME=$HOME/Git/ConFiles/emac
+export INSTALLERHOME=$CONFHOME/installer
+export EMACSCONFHOME=$HOME/Git/ConFiles/emacs
 
 printf "Do you want to use only c/c++?\n"
 read input
