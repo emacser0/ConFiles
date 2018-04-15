@@ -18,6 +18,7 @@
 (global-set-key (kbd "<f12>") 'goto-line)
 
 (global-set-key (kbd "<f5>") 'point-to-register)
+
 (global-set-key (kbd "<f6>") 'jump-to-register)
 
 
