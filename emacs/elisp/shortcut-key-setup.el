@@ -17,13 +17,8 @@
 
 (global-set-key (kbd "<f12>") 'goto-line)
 
-(global-set-key (kbd "<f7>") 'previous-line)
-
-(global-set-key (kbd "<f5>") 'backward-char)
-
-(global-set-key (kbd "<f6>") 'next-line)
-
-(global-set-key (kbd "<f8>") 'forward-char)
+(global-set-key (kbd "<f5>") 'point-to-register)
+(global-set-key (kbd "<f6>") 'jump-to-register)
 
 
 ;
