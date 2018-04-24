@@ -9,7 +9,7 @@ read input
 if [ $input = "y" ]; then
     cd $EMACSCONFHOME
     mkdir backup
-    cp elisp/{autopair-autoindent-setup.el,common-setup.el,cua-mode.el,emacs-company-setup.el,emacs-cpp-setup.el,flycheck-c.el,shortcut-key-setup.el,undo-tree.el} backup
+    cp elisp/{common-setup.el,emacs-company-setup.el,emacs-cpp-setup.el,flycheck-c.el,shortcut-key-setup.el,undo-tree.el} backup
     rm -rf elisp
     mv backup elisp
 fi
