@@ -29,8 +29,7 @@ emacs25
 yakuake
 xfce4
 zsh
-fonts-powerline
-"
+fonts-powerline"
 
 # install packages
 printf "Do you want to install core packages?\n"
@@ -79,7 +78,11 @@ fi
 
 
 # zsh theme
-sed -i 's/ZSH_THEME="robbyrussell"/ZSH_THEME="agnoster"/g' $HOME/.zshrc
+printf "Do you want to change zsh theme to agnoster?\n"
+read input
+if [ $input = "y" ]; then
+    sed -i 's/ZSH_THEME="robbyrussell"/ZSH_THEME="agnoster"/g' $HOME/.zshrc
+fi
 
 # list of important emacs packages
 emacscorepackages="
@@ -89,8 +92,7 @@ cpp.el
 flycheck-c.el
 shortcut-key.el
 smartparen.el
-undo-tree.el
-"
+undo-tree.el"
 
 # delete unnecessary emacs configuration files
 printf "Do you want to use only c/c++?\n"
