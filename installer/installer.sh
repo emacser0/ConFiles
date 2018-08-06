@@ -18,6 +18,7 @@ printf "Do you want to add kelleyk/emacs repository?(for emacs25)\n"
 read input
 if [ $input == "y" ]; then
     sudo add-apt-repository ppa:kelleyk/emacs
+    sudo apt-get update
 fi
 
 # package list for installation
@@ -25,7 +26,7 @@ packages="
 gcc
 g++
 clang
-emacs25
+emacs26
 yakuake
 xfce4
 fish
