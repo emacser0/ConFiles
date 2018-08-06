@@ -28,7 +28,7 @@ clang
 emacs25
 yakuake
 xfce4
-zsh
+fish
 fonts-powerline"
 
 # install packages
@@ -42,16 +42,17 @@ if [ $input == "y" ]; then
 fi
 
 # install oh-my-zsh
-printf "Do you want to install oh-my-zsh?\n"
+printf "Do you want to install oh-my-fish?\n"
 read input
 if [ $input = "y" ]; then
-    sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+    curl -L https://get.oh-my.fish | fish    
 fi
 
 # list of default shell configuration files
 rcfiles="
 .bashrc
 .zshrc
+.config/fish/config.fish
 "
 
 # wsl configuraton
@@ -78,10 +79,10 @@ fi
 
 
 # zsh theme
-printf "Do you want to change zsh theme to agnoster?\n"
+printf "Do you want to change shell theme to budspencer?\n"
 read input
 if [ $input = "y" ]; then
-    sed -i 's/ZSH_THEME="robbyrussell"/ZSH_THEME="agnoster"/g' $HOME/.zshrc
+    omf install budspencer
 fi
 
 # list of important emacs packages
