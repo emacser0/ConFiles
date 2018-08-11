@@ -26,7 +26,7 @@ packages="
 gcc
 g++
 clang
-emacs26
+emacs25
 yakuake
 xfce4
 fish
