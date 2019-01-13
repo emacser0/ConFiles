@@ -1,5 +1,7 @@
-;shortcut settings                                                                                                                                                             
+;shortcut settings
 (global-set-key (kbd "TAB") 'company-complete)
+
+(global-set-key (kbd "C-TAB") 'company-complete)
 
 (global-set-key (kbd "<f2>") 'company-c-headers)
 
@@ -21,8 +23,13 @@
 
 (global-set-key (kbd "<end>") 'jump-to-register)
 
+(global-unset-key (kbd "C-\\"))
 
-;
+(global-unset-key (kbd "<S-SPC>"))
+
+(global-unset-key (kbd "<S-Hangul>"))
+
+
 ;(global-set-key (kbd "C-w") '(previous-line &optional ARG TRY-VSCROLL))
 
 ;(global-set-key (kbd "C-a") '(backward-char &optional N))
@@ -32,14 +39,9 @@
 ;(global-set-key (kbd "C-d") '(forward-char &optional N))
 
 ;(global-set-key (kbd "C-f") '(isearch-forward &optional REGEXP-P NO-RECURSIVE-EDIT))
-		  
+
 ;(global-set-key (kbd "C-b") '(move-beginning-of-line ARG))
 
 ;(global-set-key (kbd "C-p") '(kill-region BEG END &optional REGION))
 
 ;(global-set-key (kbd "C-n") '(delete-char N &optional KILLFLAG))
-
-
-
-
-

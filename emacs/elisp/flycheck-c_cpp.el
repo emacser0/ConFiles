@@ -5,5 +5,5 @@
 	      (append flycheck-disabled-checkers
 		      '(c/c++-clang)))
 
-; Enable C++11 support for gcc
-(add-hook 'c++-mode-hook (lambda () (setq flycheck-gcc-language-standard "c++11")))
+; Enable C++17 support for gcc
+(add-hook 'c++-mode-hook (lambda () (setq flycheck-gcc-language-standard "c++1z")))

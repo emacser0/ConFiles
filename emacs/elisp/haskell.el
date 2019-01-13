@@ -1,2 +1,2 @@
 (add-hook 'haskell-mode-hook
-	  (lambda () (local-set-key (kbd "TAB") 'company-ghc)))
+          (lambda () (local-set-key (kbd "TAB") 'company-ghc)))
